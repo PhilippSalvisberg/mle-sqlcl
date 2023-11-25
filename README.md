@@ -10,7 +10,7 @@ This simplifies the installation of MLE modules by avoiding a detour via `BFILE`
 
 ## Using `mle.js` as SQLcl script
 
-Download or fork this repository. Afterwards you can run `script <path-to-mle.js>/mle.js` to get the following usage help:
+Start SQLcl and establish a connect to a Oracle Database 23c. Then run `script https://raw.githubusercontent.com/PhilippSalvisberg/mle-sqlcl/main/mle.js` to get the following usage help:
 
 ```
 usage: script mle.js {subcommand} [options]
@@ -32,10 +32,10 @@ Valid subcommands and options are:
 
 ## Register `mle.js` as SQLcl Command `mle`
 
-Download or fork this repository and add the folowing to your `login.sql` to permanantly add `mle` as a SQLcl command:
+Add the folowing to your `login.sql` to permanantly add `mle` as a SQLcl command:
 
 ```
-script (...)/mle-sqlcl/mle.js register
+script https://raw.githubusercontent.com/PhilippSalvisberg/mle-sqlcl/main/mle.js register
 ```
 
 Afterwards you can type `mle` to get this usage help:
@@ -54,6 +54,8 @@ Valid subcommands and options are:
 - version
   Print version and exit.
 ```
+
+Please note that you need to define an environment variable named `SQLPATH` and your `login.sql` must be found in in `SQLPATH`.
 
 ## License
 
