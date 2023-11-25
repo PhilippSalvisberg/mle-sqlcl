@@ -1,0 +1,16 @@
+{
+    "name": "mle-sqlcl",
+    "version": "1.0.0",
+    "description": "Testing custom SQLcl mle command",
+    "type": "module",
+    "scripts": {
+        "test": "vitest --no-threads --reporter=verbose --dir ./test"
+    },
+    "devDependencies": {
+        "@types/oracledb": "^6.0.3",
+        "oracledb": "^6.2.0",
+        "tempfile": "^5.0.0",
+        "typescript": "^5.2.2",
+        "vitest": "^0.34.6"
+    }
+}
