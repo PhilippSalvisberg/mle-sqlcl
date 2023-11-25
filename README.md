@@ -61,7 +61,7 @@ Valid subcommands and options are:
   Print version and exit.
 ```
 
-Please note that you need to define an environment variable named `SQLPATH` and your `login.sql` must be found in in `SQLPATH`.
+Please note that you need to define an environment variable named `SQLPATH` and your `login.sql` must be found in `SQLPATH`.
 
 ## License
 
