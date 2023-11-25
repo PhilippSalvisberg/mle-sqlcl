@@ -1,0 +1,15 @@
+# Visual Studio Code
+.vscode
+
+# Log file
+*.log
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+
+# Node.js
+package-lock.json
+node_modules
