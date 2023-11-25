@@ -10,7 +10,13 @@ This simplifies the installation of MLE modules by avoiding a detour via `BFILE`
 
 ## Using `mle.js` as SQLcl script
 
-Start SQLcl and establish a connect to a Oracle Database 23c. Then run `script https://raw.githubusercontent.com/PhilippSalvisberg/mle-sqlcl/main/mle.js` to get the following usage help:
+Start SQLcl and establish a connect to a Oracle Database 23c. Then run 
+
+```
+script https://raw.githubusercontent.com/PhilippSalvisberg/mle-sqlcl/main/mle.js
+```
+
+to get the following usage help:
 
 ```
 usage: script mle.js {subcommand} [options]
