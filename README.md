@@ -4,7 +4,7 @@
 
 The Oracle Database 23c supports MLE JavaScript modules. MLE modules are standard ECMAScript 2022 modules.
 
-This repository provides an SQLcl custom command to load ECMAScript modules from an URL or file as MLE modules into an Oracle database.
+This repository provides an SQLcl custom command to load an ECMAScript module from an URL or file into an Oracle database.
 
 This simplifies the installation of MLE modules by avoiding a detour via `BFILE` or `BLOB`.
 
