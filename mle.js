@@ -24,7 +24,7 @@ var javaCommandRegistry = Java.type("oracle.dbtools.raptor.newscriptrunner.Comma
 var javaCommandListener = Java.type("oracle.dbtools.raptor.newscriptrunner.CommandListener");
 
 var getVersion = function() {
-    return "1.0.0-SNAPSHOT";
+    return "1.0.0";
 }
 
 var printVersion = function() {
