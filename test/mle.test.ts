@@ -84,9 +84,7 @@ describe("SQLcl script mle.js", () => {
 
     describe("install mle module from file", () => {
         const file = tempfile({extension: 'js'});
-        writeFileSync(file, `export function toEpoch(ts) {
-    return ts.valueOf();
-}`);
+        writeFileSync(file, `export function toEpoch(ts) {\n    return ts.valueOf();\n}`);
         it("should install util_mod without version number)", async () => {
             const actual = await runSqlcl(`script mle.js install util_mod ${file}`);
             expect(actual.stderr.trim()).equals("");
@@ -106,6 +104,12 @@ describe("SQLcl script mle.js", () => {
             expect(actual.stderr.trim()).equals("");
             const modules = await mleSession.execute("select module_name, version from user_mle_modules");
             expect(modules.rows).toEqual([["UTIL_MOD", "1.0.0"]]);
+        }, timeout);
+        it("should install util_mod with version number via SQLcl command)", async () => {
+            const actual = await runSqlcl(`script mle.js register\nmle install util_mod ${file} 1.2.3`);
+            expect(actual.stderr.trim()).equals("");
+            const modules = await mleSession.execute("select module_name, version from user_mle_modules");
+            expect(modules.rows).toEqual([["UTIL_MOD", "1.2.3"]]);
         }, timeout);
         it("should report too many parameters)", async () => {
             const actual = await runSqlcl(`script mle.js install util_mod ${file} 1.0.0 too-many`);
